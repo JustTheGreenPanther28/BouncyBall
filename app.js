@@ -39,6 +39,18 @@ function moveBall() {
     }
 }
 
+function collision(){
+    for(let ball of balls){
+        for(let otherBall of balls){
+            if(ball!=otherBall){
+                //operation
+            }
+        }
+    }
+}
+
+
+//GASP
 document.fonts.ready.then(() => {
     let chars = document.getElementById("start").innerText.split("");
     document.getElementById("start").innerHTML = chars
@@ -73,4 +85,6 @@ document.fonts.ready.then(() => {
         });
     });
 });
+
+
 
