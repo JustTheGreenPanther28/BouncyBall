@@ -1,0 +1,13 @@
+#body{
+    background-image: url("https://res.cloudinary.com/dh62nngtk/image/upload/v1781861955/background_image_bmfwrp.jpg");
+    background-size: cover;
+}
+.ball {
+    position: absolute;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(53, 30, 30);
+    box-shadow: 1px 1px gray;
+}
