@@ -23,7 +23,8 @@ function createCircle(topDistance, leftDistance) {
     });
 }
 
-setInterval(moveBall, 20)
+setInterval(moveBall, 10);
+setInterval(collision,10);
 
 function moveBall() {
     for (let ball of balls) {
@@ -39,11 +40,21 @@ function moveBall() {
     }
 }
 
-function collision(){
-    for(let ball of balls){
-        for(let otherBall of balls){
-            if(ball!=otherBall){
-                //operation
+function collision() {
+
+    for (let i = 0; i < balls.length; i++) {
+        for (let j = i + 1; j < balls.length; j++) {
+            let x = balls[i].left - balls[j].left;
+            let y = balls[i].top - balls[j].top;
+            let distance = Math.sqrt(x*x + y*y);
+            if (distance <= 40) {                
+                let tempX = balls[i].addX;
+                let tempY = balls[i].addY;
+                balls[i].addX = (balls[j].addX);
+                balls[i].addY = (balls[j].addY);
+                
+                balls[j].addX = tempX;
+                balls[j].addY = tempY;
             }
         }
     }
