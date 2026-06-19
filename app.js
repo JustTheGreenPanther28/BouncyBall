@@ -39,3 +39,38 @@ function moveBall() {
     }
 }
 
+document.fonts.ready.then(() => {
+    let chars = document.getElementById("start").innerText.split("");
+    document.getElementById("start").innerHTML = chars
+        .map(char => `<span style="display:inline-block">${char === " " ? "&nbsp;" : char}</span>`)
+        .join("");
+
+    let spanChars = document.querySelectorAll("#start span");
+
+    gsap.set("#start", { opacity: 1 });
+
+    let tl = gsap.timeline({ repeat: -1 });
+
+    tl.from(spanChars, {
+        duration: 1,
+        y: 100,
+        rotation: 90,
+        opacity: 0,
+        ease: "elastic",
+        stagger: 0.03
+    });
+
+    document.addEventListener("click", () => {
+        gsap.to(spanChars, {
+            duration: 0.5,
+            opacity: 0,
+            y: -20,
+            stagger: 0.02,
+            ease: "power2.in",
+            onComplete: () => {
+                document.getElementById("start").style.display = "none";
+            }
+        });
+    });
+});
+

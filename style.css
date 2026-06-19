@@ -1,3 +1,5 @@
+@import 
+url("https://fonts.googleapis.com/css?family=English");
 #body{
     background-image: url("https://res.cloudinary.com/dh62nngtk/image/upload/v1781861955/background_image_bmfwrp.jpg");
     background-size: cover;
@@ -10,4 +12,20 @@
     border-radius: 50%;
     border: 5px solid greenyellow;
     box-shadow: 1px 1px gray;
+}
+#start{
+    display:flex;
+    justify-content: center;
+    justify-self:center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-shadow:3px 3px blue;
+    color:aqua;
+    backdrop-filter: blur(20px);
+    font-weight: bolder;
+    font-size: 50px;
+}
+#start:hover{
+    
 }
