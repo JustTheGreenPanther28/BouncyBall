@@ -32,8 +32,8 @@ function moveBall() {
         ball.top += ball.addY;
         ball.left += ball.addX;
 
-        if (ball.top <= 0 || ball.top >= window.innerHeight - 40) ball.addY *= -1;
-        if (ball.left <= 0 || ball.left >= window.innerWidth - 40) ball.addX *= -1;
+        if (ball.top <= 0 || ball.top >= window.innerHeight - 45) ball.addY *= -1;
+        if (ball.left <= 0 || ball.left >= window.innerWidth - 45) ball.addX *= -1;
 
         ball.element.style.top = ball.top + "px";
         ball.element.style.left = ball.left + "px";
@@ -81,19 +81,6 @@ document.fonts.ready.then(() => {
         opacity: 0,
         ease: "elastic",
         stagger: 0.03
-    });
-
-    document.addEventListener("click", () => {
-        gsap.to(spanChars, {
-            duration: 0.5,
-            opacity: 0,
-            y: -20,
-            stagger: 0.02,
-            ease: "power2.in",
-            onComplete: () => {
-                document.getElementById("start").style.display = "none";
-            }
-        });
     });
 });
 

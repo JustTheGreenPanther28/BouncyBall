@@ -13,18 +13,20 @@ url("https://fonts.googleapis.com/css?family=English");
     border: 5px solid greenyellow;
     box-shadow: 1px 1px gray;
 }
-#start{
-    display:flex;
-    justify-content: center;
-    justify-self:center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    text-shadow:3px 3px blue;
-    color:aqua;
-    backdrop-filter: blur(20px);
+#start {
+    position: fixed;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    z-index: -1;
+    pointer-events: none;
+    font-size: 20px;
+    color: white;
+    text-shadow: none;
+    backdrop-filter: none;
     font-weight: bolder;
-    font-size: 50px;
+    letter-spacing: 10px;
 }
 #start:hover{
     
