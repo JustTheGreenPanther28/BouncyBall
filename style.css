@@ -4,10 +4,10 @@
 }
 .ball {
     position: absolute;
-    background-color: black;
+    backdrop-filter: blur(12px);
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid rgb(53, 30, 30);
+    border: 5px solid greenyellow;
     box-shadow: 1px 1px gray;
 }

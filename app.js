@@ -31,8 +31,8 @@ function moveBall() {
         ball.top += ball.addY;
         ball.left += ball.addX;
 
-        if (ball.top <= 0 || ball.top >= window.innerHeight - 30) ball.addY *= -1;
-        if (ball.left <= 0 || ball.left >= window.innerWidth - 30) ball.addX *= -1;
+        if (ball.top <= 0 || ball.top >= window.innerHeight - 40) ball.addY *= -1;
+        if (ball.left <= 0 || ball.left >= window.innerWidth - 40) ball.addX *= -1;
 
         ball.element.style.top = ball.top + "px";
         ball.element.style.left = ball.left + "px";
