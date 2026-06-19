@@ -60,29 +60,3 @@ function collision() {
     }
 }
 
-
-//GASP
-document.fonts.ready.then(() => {
-    let chars = document.getElementById("start").innerText.split("");
-    document.getElementById("start").innerHTML = chars
-        .map(char => `<span style="display:inline-block">${char === " " ? "&nbsp;" : char}</span>`)
-        .join("");
-
-    let spanChars = document.querySelectorAll("#start span");
-
-    gsap.set("#start", { opacity: 1 });
-
-    let tl = gsap.timeline({ repeat: -1 });
-
-    tl.from(spanChars, {
-        duration: 1,
-        y: 100,
-        rotation: 90,
-        opacity: 0,
-        ease: "elastic",
-        stagger: 0.03
-    });
-});
-
-
-
